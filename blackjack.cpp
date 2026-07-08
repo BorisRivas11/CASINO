@@ -6,7 +6,7 @@ using namespace std;
 
 int sacarCarta() {
     return rand() % 11 + 1; 
-}
+} 
 
 
 void jugarBlackjack(int &dinero) {
