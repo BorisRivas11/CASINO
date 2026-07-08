@@ -9,21 +9,21 @@ int sacarCarta() {
 }
 
 
-void jugarBlackjack(int &dinero) {
+void jugarBlackjack(int & dinero) {
     int puntajeJugador = 0, puntajeCasa = 0;
     char opcion;
     int apuesta;
 
-    cout << "Bienvenido al Casino - Juego de Blackjack ";
-    cout << "Tienes $" << dinero << " disponibles.";
+    cout << "Bienvenido al Casino - Juego de Blackjack " << endl;
+    cout << "Tienes $" << dinero << " disponibles." << endl;
 
 
-    cout << "¿Cuanto deseas apostar? ";
-    cin >> apuesta;
+    cout << "¿Cuanto deseas apostar? " << endl;
+    cin >> apuesta ;
 
 
     if (apuesta > dinero || apuesta <= 0) {
-        cout << "Apuesta invalida. No puedes apostar mas de lo que tienes.";
+        cout << "Apuesta invalida. No puedes apostar mas de lo que tienes." << endl;
     return;
     }
 
@@ -46,7 +46,7 @@ void jugarBlackjack(int &dinero) {
     }
 
     
-    cout << "Resultados"<<endl;
+    cout << "Resultados" <<endl;
     cout << "Puntaje jugador: " << puntajeJugador << endl;
     cout << "Puntaje casa: " << puntajeCasa << endl;
 
