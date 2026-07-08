@@ -9,7 +9,7 @@ int sacarCarta() {
 }
 
 
-void jugarBlackjack(int & dinero) {
+void jugarBlackjack(int &dinero) {
     int puntajeJugador = 0, puntajeCasa = 0;
     char opcion;
     int apuesta;

@@ -9,7 +9,7 @@ int tirarDado() {
 }
 
 
-void jugarDados(int &dinero) {
+void jugarDados(int & dinero) {
     int dadoJugador[3]; 
     int dadoCasa[3];    
     int apuesta;
@@ -18,12 +18,12 @@ void jugarDados(int &dinero) {
     cout << "Tienes $" << dinero << " disponibles."<< endl;
 
 
-    cout << "¿Cuánto deseas apostar? " <<endl;
+    cout << "¿Cuanto deseas apostar? " <<endl;
     cin >> apuesta;
 
     
     if (apuesta > dinero || apuesta <= 0) {
-        cout << "Apuesta inválida. No puedes apostar más de lo que tienes."<< endl;
+        cout << "Apuesta invalida. No puedes apostar mas de lo que tienes."<< endl;
         return;
     }
 
@@ -32,8 +32,8 @@ void jugarDados(int &dinero) {
         dadoJugador[i] = tirarDado();
         dadoCasa[i] = tirarDado();
         cout << "Ronda " << i+1 << ": " <<endl;
-        cout << "Jugador sacó: " << dadoJugador[i] << endl;
-        cout << "Casa sacó: " << dadoCasa[i] << endl;
+        cout << "Jugador saco: " << dadoJugador[i] << endl;
+        cout << "Casa saco: " << dadoCasa[i] << endl;
     }
 
     
@@ -49,7 +49,7 @@ void jugarDados(int &dinero) {
         cout << "¡Ganaste en los dados!" << endl;
         dinero += apuesta;
     } else if (totalJugador < totalCasa) {
-        cout << "La casa ganó en los dados." <<endl;
+        cout << "La casa gano en los dados." <<endl;
         dinero -= apuesta;
     } else {
         cout << "Empate. Tu dinero no cambia." <<endl;
@@ -74,9 +74,10 @@ int main() {
     
     do {
         cout << "Casino - Juego de Dados " << endl;
+        cout << "Elige una opcion: " <<endl;
         cout << "1. Jugar" << endl;
         cout << "2. Salir" << endl;
-        cout << "Elige una opción: ";
+
         cin >> opcion;
 
         switch(opcion) {
@@ -91,7 +92,7 @@ int main() {
                 cout << "Gracias por jugar. Te vas con $" << dinero << endl;
                 break;
             default:
-                cout << "Opción inválida.";
+                cout << "Opcion invalida.";
         }
     } while(opcion != 2);
 
